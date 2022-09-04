@@ -22,4 +22,13 @@ public class Episode {
     public String getEpisodeDescription() {
         return episodeDescription;
     }
+
+    @Override
+    public String toString() {
+        return "Episode{" +
+                "episodeName='" + episodeName + '\'' +
+                ", episodeNumber=" + episodeNumber +
+                ", episodeDescription='" + episodeDescription + '\'' +
+                '}';
+    }
 }

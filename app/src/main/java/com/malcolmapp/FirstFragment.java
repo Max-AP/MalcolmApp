@@ -34,13 +34,8 @@ public class FirstFragment extends Fragment {
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);*/
-                Season randomSeason = FileManager.getRandomSeason();
-                Episode randomEpisode = randomSeason.getRandomEpisode();
-                TextView textView = getActivity().findViewById(R.id.textview_first);
-                textView.setText("Season: " + randomSeason.getSeasonNumber() + ", episode: "
-                                + randomEpisode.getEpisodeNumber() + ", "+ randomEpisode.getEpisodeName());
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_episodeSelectorFragment);
             }
         });
     }

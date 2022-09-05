@@ -9,4 +9,10 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="season_number_label">Season</string>
+    <string name="episode_number_label">Episode</string>
+    <string name="episode_title_label">Title:</string>
+    <string name="episode_description_label">Summary</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

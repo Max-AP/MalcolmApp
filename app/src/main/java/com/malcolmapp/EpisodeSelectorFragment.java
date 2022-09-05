@@ -38,6 +38,7 @@ public class EpisodeSelectorFragment extends Fragment {
         TextView episodeTitleTextView = getActivity().findViewById(R.id.episodeTitleTextView);
         TextView episodeDescriptionTextView = getActivity().findViewById(R.id.episodeSummaryTextView);
 
+
         seasonTextView.setText(String.valueOf(randomSeason.getSeasonNumber()));
         episodeNumberTextView.setText(String.valueOf(randomEpisode.getEpisodeNumber()));
         episodeTitleTextView.setText(randomEpisode.getEpisodeName());

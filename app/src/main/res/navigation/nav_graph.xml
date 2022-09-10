@@ -3,34 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/WelcomeFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.malcolmapp.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/WelcomeFragment"
+        android:name="com.malcolmapp.WelcomeFragment"
+        android:label="@string/welcome_fragment_label"
+        tools:layout="@layout/fragment_welcome">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_WelcomeFragment_to_SeasonListFragment"
+            app:destination="@id/SeasonListFragment" />
         <action
-            android:id="@+id/action_FirstFragment_to_episodeSelectorFragment"
-            app:destination="@id/episodeSelectorFragment" />
+            android:id="@+id/action_WelcomeFragment_to_EpisodeSelectorFragment"
+            app:destination="@id/EpisodeSelectorFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.malcolmapp.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/SeasonListFragment"
+        android:name="com.malcolmapp.SeasonListFragment"
+        android:label="@string/season_list_fragment_label"
+        tools:layout="@layout/fragment_season_list">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/WelcomeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/episodeSelectorFragment"
+        android:id="@+id/EpisodeSelectorFragment"
         android:name="com.malcolmapp.EpisodeSelectorFragment"
-        android:label="fragment_episode_selector"
+        android:label="@string/random_episode_fragment_label"
         tools:layout="@layout/fragment_episode_selector" />
 </navigation>

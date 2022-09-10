@@ -1,18 +1,15 @@
 package com.malcolmapp;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.malcolmapp.databinding.FragmentEpisodeSelectorBinding;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
-import java.util.Objects;
+import com.malcolmapp.databinding.FragmentEpisodeSelectorBinding;
 
 
 public class EpisodeSelectorFragment extends Fragment {
@@ -30,14 +27,12 @@ public class EpisodeSelectorFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        FileManager.getInstance(getContext());
         Season randomSeason = FileManager.getRandomSeason();
         Episode randomEpisode = randomSeason.getRandomEpisode();
         TextView seasonTextView = requireActivity().findViewById(R.id.seasonTextView);
         TextView episodeNumberTextView = getActivity().findViewById(R.id.episodeNumberTextView);
         TextView episodeTitleTextView = getActivity().findViewById(R.id.episodeTitleTextView);
         TextView episodeDescriptionTextView = getActivity().findViewById(R.id.episodeSummaryTextView);
-
 
         seasonTextView.setText(String.valueOf(randomSeason.getSeasonNumber()));
         episodeNumberTextView.setText(String.valueOf(randomEpisode.getEpisodeNumber()));

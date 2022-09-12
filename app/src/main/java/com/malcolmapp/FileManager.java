@@ -59,6 +59,10 @@ public class FileManager {
         return seasonList.get(index);
     }
 
+    public static ArrayList<Season> getSeasonList() {
+        return seasonList;
+    }
+
     public static void printFileList(){
         for (int i = 0; i < fileList.length -2; i++) {
             System.out.println(fileList[i]);

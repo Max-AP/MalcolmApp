@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.malcolmapp.databinding.FragmentSeasonListBinding;
 
@@ -20,10 +22,17 @@ public class SeasonListFragment extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-
+        System.out.println(this.getId());
         binding = FragmentSeasonListBinding.inflate(inflater, container, false);
-        return binding.getRoot();
 
+        RecyclerView seasonRecyclerView =
+                (RecyclerView) binding.getRoot().findViewById(R.id.season_recycler_view);
+        System.out.println(seasonRecyclerView);
+        Adapter seasonAdapter = new Adapter();
+        seasonRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        seasonRecyclerView.setAdapter(seasonAdapter);
+
+        return binding.getRoot();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -42,6 +51,10 @@ public class SeasonListFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    public boolean isEpisodeListFragment(){
+        return false;
     }
 
 }
